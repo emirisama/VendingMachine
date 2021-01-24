@@ -18,14 +18,19 @@ class ViewController: UIViewController {
     var pocket = 2000
 
     
+    @IBOutlet weak var zyuyen: UIButton!
+    
+    @IBOutlet weak var gozyuyen: UIButton!
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //投入金額の文字０を表示させる//String型
         inputyen.text = "0"
         //所持金の文字２０００円を表示させる//String型
         pocketmoney.text = "2000"
-        
-        
+
         
     }
 
@@ -33,7 +38,6 @@ class ViewController: UIViewController {
     
     @IBAction func zyuyen(_ sender: Any) {
        
-        
         //投入金額が増え、所持金を減らす（カウントアップ）
         input = input + 10
         pocket = pocket - 10
@@ -42,8 +46,10 @@ class ViewController: UIViewController {
         //所持金１０円を減らしたのを反映させる
         pocketmoney.text = String(pocket)
         //もし所持金が０になったら、所持金の文字を赤文字に変更かつ投入できなくなる
-        if pocket == 0{
+        if pocket <= 0{
             chengeTextColor()
+            zyuyen.isEnabled = false
+            gozyuyen.isEnabled = false
         }
         
         
@@ -61,8 +67,10 @@ class ViewController: UIViewController {
         pocketmoney.text = String(pocket)
         
         //もし所持金が０になったら、所持金の文字を赤文字に変更かつ投入できなくなる
-        if pocket == 0{
+        if pocket <= 0{
             chengeTextColor()
+            zyuyen.isEnabled = false
+            gozyuyen.isEnabled = false
         }
         
     }
@@ -70,7 +78,7 @@ class ViewController: UIViewController {
     //if文を作るときは、メソッドを作る（メソッドを作るときはfuncという記載が必要）
     //所持金が０になったら所持金の文字を赤にする
     func chengeTextColor(){
-        inputyen.textColor = .red
+        pocketmoney.textColor = .red
     }
     
     
