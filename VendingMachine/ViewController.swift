@@ -46,12 +46,14 @@ class ViewController: UIViewController {
         //所持金１０円を減らしたのを反映させる
         pocketmoney.text = String(pocket)
         //もし所持金が０になったら、所持金の文字を赤文字に変更かつ投入できなくなる
-        if pocket <= 0{
-            chengeTextColor()
+        if pocket <= 9{
             zyuyen.isEnabled = false
             gozyuyen.isEnabled = false
         }
         
+        if pocket == 0{
+            chengeTextColor()
+        }
         
     }
    
@@ -67,10 +69,12 @@ class ViewController: UIViewController {
         pocketmoney.text = String(pocket)
         
         //もし所持金が０になったら、所持金の文字を赤文字に変更かつ投入できなくなる
-        if pocket <= 0{
-            chengeTextColor()
-            zyuyen.isEnabled = false
+        if pocket <= 49{
             gozyuyen.isEnabled = false
+        }
+        
+        if pocket == 0{
+            chengeTextColor()
         }
         
     }
