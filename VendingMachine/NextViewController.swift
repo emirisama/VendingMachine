@@ -16,6 +16,13 @@ class NextViewController: UIViewController {
     }
     
 
+    //戻る（画面遷移）
+    @IBAction func back(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
