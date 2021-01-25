@@ -17,55 +17,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="XME-vd-OZ7">
-                                <rect key="frame" x="20" y="64" width="108" height="186"/>
+                                <rect key="frame" x="17" y="89" width="108" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cola" translatesAutoresizingMaskIntoConstraints="NO" id="StH-Xn-zuz">
-                                <rect key="frame" x="153" y="64" width="108" height="186"/>
+                                <rect key="frame" x="150" y="89" width="108" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="vBY-Ck-iZs">
-                                <rect key="frame" x="286" y="64" width="108" height="186"/>
+                                <rect key="frame" x="283" y="89" width="108" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-DA-cZw">
-                                <rect key="frame" x="40" y="259" width="77" height="51"/>
+                                <rect key="frame" x="37" y="284" width="77" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gT-7z-kcc">
-                                <rect key="frame" x="173" y="259" width="77" height="51"/>
+                                <rect key="frame" x="170" y="284" width="77" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yML-II-IuJ">
-                                <rect key="frame" x="298" y="258" width="77" height="51"/>
+                                <rect key="frame" x="295" y="283" width="77" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO3-wu-2IY">
-                                <rect key="frame" x="40" y="318" width="77" height="64"/>
+                                <rect key="frame" x="37" y="318" width="77" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="買う"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-0o-Dr4">
-                                <rect key="frame" x="173" y="318" width="77" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="買う"/>
+                                <connections>
+                                    <action selector="waterbuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oB-iS-diC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-Ts-5D2">
                                 <rect key="frame" x="298" y="318" width="77" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="買う"/>
+                                <connections>
+                                    <action selector="coffeebuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjA-f4-KNX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="287-fE-kz7">
                                 <rect key="frame" x="20" y="519" width="129" height="126"/>
@@ -87,11 +87,17 @@
                                 <rect key="frame" x="234" y="519" width="160" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="100yen"/>
+                                <connections>
+                                    <action selector="hyakuyen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bmE-Dk-nqH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFg-Cm-69e">
                                 <rect key="frame" x="0.0" y="678" width="183" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="500yen"/>
+                                <connections>
+                                    <action selector="gohyakuyen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p99-wL-NYy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mht-Pr-yvl">
                                 <rect key="frame" x="234" y="416" width="157" height="65"/>
@@ -121,20 +127,58 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-Ve-a41">
+                                <rect key="frame" x="43" y="44" width="57" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWO-2z-EDH">
+                                <rect key="frame" x="309" y="43" width="49" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qp3-kS-Wfn">
+                                <rect key="frame" x="183" y="44" width="42" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-0o-Dr4">
+                                <rect key="frame" x="169" y="318" width="77" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="買う"/>
+                                <connections>
+                                    <action selector="colabuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Q8-Jd-R0S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="coffeebuy" destination="q2B-Ts-5D2" id="EZ5-cV-ChL"/>
+                        <outlet property="coffeestock" destination="dWO-2z-EDH" id="uAM-WY-JQ6"/>
+                        <outlet property="colabuy" destination="q5p-0o-Dr4" id="eti-Tg-LzS"/>
+                        <outlet property="colastock" destination="qp3-kS-Wfn" id="Bel-Iz-jHf"/>
+                        <outlet property="gohyakuyen" destination="iFg-Cm-69e" id="qw5-ax-rku"/>
                         <outlet property="gozyuyen" destination="Xfc-L6-VxQ" id="G4Q-ci-2OQ"/>
+                        <outlet property="hyakuyen" destination="b38-al-USq" id="uaA-CK-8wq"/>
                         <outlet property="inputyen" destination="mht-Pr-yvl" id="YhV-X9-hLo"/>
                         <outlet property="pocketmoney" destination="oq1-xP-1fc" id="Qrn-10-6zS"/>
+                        <outlet property="waterbuy" destination="hO3-wu-2IY" id="2LE-hM-hqp"/>
+                        <outlet property="waterstock" destination="Gdi-Ve-a41" id="3YL-d4-Nbu"/>
                         <outlet property="zyuyen" destination="287-fE-kz7" id="lJE-8W-k9M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="80"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="79.6875"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="Hdo-hJ-6gn">
