@@ -19,9 +19,13 @@ class ViewController: UIViewController {
 
     //コインボタン
     @IBOutlet weak var zyuyen: UIButton!
+    var zyucoin = 10
     @IBOutlet weak var gozyuyen: UIButton!
+    var gozyucoin = 50
     @IBOutlet weak var hyakuyen: UIButton!
+    var hyakucoin = 100
     @IBOutlet weak var gohyakuyen: UIButton!
+    var gohyakucoin = 500
   
     //買うボタン
     @IBOutlet weak var waterbuy: UIButton!
@@ -38,6 +42,9 @@ class ViewController: UIViewController {
     var colazaiko = 5
     @IBOutlet weak var coffeestock: UILabel!
     var coffeezaiko = 5
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -60,8 +67,8 @@ class ViewController: UIViewController {
     @IBAction func zyuyen(_ sender: Any) {
        
         //投入金額が増え、所持金を減らす（カウントアップ）
-        input = input + 10
-        pocket = pocket - 10
+        input = input + zyucoin
+        pocket = pocket - zyucoin
         //投入金額に１０円を反映させる(数字)＊文字列型に変更（キャストと言う）
         inputyen.text = String(input)
         //所持金１０円を減らしたのを反映させる
@@ -91,8 +98,8 @@ class ViewController: UIViewController {
         
         
         //投入金額が増え、所持金を減らす（カウントアップ）
-        input = input + 50
-        pocket = pocket - 50
+        input = input + gozyucoin
+        pocket = pocket - gozyucoin
         //投入金額に５０円を反映する(数字)
         inputyen.text = String(input)
         pocketmoney.text = String(pocket)
@@ -113,14 +120,15 @@ class ViewController: UIViewController {
         if pocket == 0{
             chengeTextColor()
         }
+
         
     }
     
     
     @IBAction func hyakuyen(_ sender: Any) {
         
-        input = input + 100
-        pocket = pocket - 100
+        input = input + hyakucoin
+        pocket = pocket - hyakucoin
         inputyen.text = String(input)
         pocketmoney.text = String(pocket)
         
@@ -145,8 +153,8 @@ class ViewController: UIViewController {
     
     @IBAction func gohyakuyen(_ sender: Any) {
         
-        input = input + 500
-        pocket = pocket - 500
+        input = input + gohyakucoin
+        pocket = pocket - gohyakucoin
         inputyen.text = String(input)
         pocketmoney.text = String(pocket)
         
@@ -170,69 +178,79 @@ class ViewController: UIViewController {
     //買うアクション
     
     @IBAction func waterbuy(_ sender: Any) {
-        inputyen.text = String(input)
+
         if input >= wateryen{
-            input = input - 120
+            input = input - wateryen
             waterzaiko = waterzaiko - 1
         }
- 
-    
-        if input >= colayen{
-            input = input - 150
-            colazaiko = colazaiko - 1
+        if waterzaiko == 0{
+            waterbuy.isEnabled = false
         }
- 
-        if input >= coffeeyen{
-            input = input - 200
-            coffeezaiko = coffeezaiko - 1
-  
-        }
+        inputyen.text = String(input)
+        waterstock.text = String(waterzaiko)
 
  
         
     }
     
     @IBAction func colabuy(_ sender: Any) {
-        inputyen.text = String(input)
-        if input >= wateryen{
-            input = input - 120
-            waterzaiko = waterzaiko - 1
-
-        }
-  
-    
         if input >= colayen{
-            input = input - 150
+            input = input - colayen
             colazaiko = colazaiko - 1
-
         }
-
-        if input >= coffeeyen{
-            input = input - 200
-            coffeezaiko = coffeezaiko - 1
-
+        if colazaiko == 0{
+            colabuy.isEnabled = false
         }
+        inputyen.text = String(input)
+        colastock.text = String(colazaiko)
 
  
     }
     
     @IBAction func coffeebuy(_ sender: Any) {
-        inputyen.text = String(input)
-
-
         if input >= coffeeyen{
-            input = input - 200
+            input = input - coffeeyen
             coffeezaiko = coffeezaiko - 1
-
         }
-
+        if coffeezaiko == 0{
+            coffeebuy.isEnabled = false
+        }
+        inputyen.text = String(input)
+        coffeestock.text = String(coffeezaiko)
     }
+    
+    
+    @IBAction func oturi(_ sender: Any) {
+        pocket = pocket + input
+        input = input - input
+        TextColor()
+        if pocket >= 500{
+            gohyakuyen.isEnabled = true
+        }
+        if pocket >= 100{
+            hyakuyen.isEnabled = true
+        }
+        if pocket >= 50{
+            gozyuyen.isEnabled = true
+        }
+        if pocket >= 10{
+            zyuyen.isEnabled = true
+        }
+        inputyen.text = String(input)
+        pocketmoney.text = String(pocket)
+        
+    }
+    
     
     
     //if文を作るときは、メソッドを作る（メソッドを作るときはfuncという記載が必要）
     //所持金が０になったら所持金の文字を赤にする
     func chengeTextColor(){
         pocketmoney.textColor = .red
+    }
+    
+    func TextColor(){
+        pocketmoney.textColor = .black
     }
     
     

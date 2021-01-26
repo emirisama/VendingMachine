@@ -157,6 +157,15 @@
                                     <action selector="colabuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Q8-Jd-R0S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOZ-bt-O0D">
+                                <rect key="frame" x="212" y="786" width="146" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="お釣り"/>
+                                <connections>
+                                    <action selector="oturi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C99-3q-4ca"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
