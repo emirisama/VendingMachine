@@ -9,10 +9,21 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    
+
+    @IBOutlet weak var buyimage: UIImageView!
+    
+    var waterImage: UIImage!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        //買うを押すと水画像表示
+        buyimage.image = waterImage
+        
+       
     }
     
 
@@ -22,15 +33,8 @@ class NextViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

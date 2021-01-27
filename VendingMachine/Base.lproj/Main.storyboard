@@ -56,6 +56,7 @@
                                 <state key="normal" title="買う"/>
                                 <connections>
                                     <action selector="waterbuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oB-iS-diC"/>
+                                    <segue destination="1Di-Qh-Ydb" kind="presentation" identifier="buynext" id="CpH-LN-Ugn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-Ts-5D2">
@@ -181,6 +182,7 @@
                         <outlet property="inputyen" destination="mht-Pr-yvl" id="YhV-X9-hLo"/>
                         <outlet property="pocketmoney" destination="oq1-xP-1fc" id="Qrn-10-6zS"/>
                         <outlet property="waterbuy" destination="hO3-wu-2IY" id="2LE-hM-hqp"/>
+                        <outlet property="waterimage1" destination="XME-vd-OZ7" id="0n1-4J-Pch"/>
                         <outlet property="waterstock" destination="Gdi-Ve-a41" id="3YL-d4-Nbu"/>
                         <outlet property="zyuyen" destination="287-fE-kz7" id="lJE-8W-k9M"/>
                     </connections>
@@ -208,10 +210,24 @@
                                     <action selector="back:" destination="1Di-Qh-Ydb" eventType="touchUpInside" id="ay9-oH-bl7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="購入しました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-jA-WRT">
+                                <rect key="frame" x="155" y="398" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-ph-0Mh">
+                                <rect key="frame" x="87" y="194" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oXg-sQ-Sop"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
+                    <connections>
+                        <outlet property="buyimage" destination="qVc-ph-0Mh" id="1RI-k7-xoP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYt-5i-nQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

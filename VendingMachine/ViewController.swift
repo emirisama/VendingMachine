@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     var coffeezaiko = 5
     
     
+    @IBOutlet weak var waterimage1: UIImageView!
     
     
     
@@ -188,8 +189,12 @@ class ViewController: UIViewController {
         }
         inputyen.text = String(input)
         waterstock.text = String(waterzaiko)
+        
+        //買うを押したら画面遷移
+        if input >= wateryen{
+        performSegue(withIdentifier: "buynext", sender: nil)
+        }
 
- 
         
     }
     
@@ -251,6 +256,15 @@ class ViewController: UIViewController {
     
     func TextColor(){
         pocketmoney.textColor = .black
+    }
+    
+    //購入した後の画面遷移
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "buynext"){
+            
+        }
+        let nextVC = segue.destination as! NextViewController
+        nextVC.buyimage = waterimage1
     }
     
     
