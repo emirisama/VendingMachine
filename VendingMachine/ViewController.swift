@@ -43,9 +43,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var coffeestock: UILabel!
     var coffeezaiko = 5
     
-    
-    @IBOutlet weak var waterimage1: UIImageView!
-    
+    //水画像
+    @IBOutlet weak var waterimage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -55,16 +54,17 @@ class ViewController: UIViewController {
         //所持金の文字２０００円を表示させる//String型
         pocketmoney.text = "2000"
 
-        
         //在庫数の文字５を表示させる
         waterstock.text = "5"
         colastock.text = "5"
         coffeestock.text = "5"
-        
+ 
     }
 
+    
+    
 
-   
+   //投入アクション
     @IBAction func zyuyen(_ sender: Any) {
        
         //投入金額が増え、所持金を減らす（カウントアップ）
@@ -179,6 +179,7 @@ class ViewController: UIViewController {
     //買うアクション
     
     @IBAction func waterbuy(_ sender: Any) {
+        
 
         if input >= wateryen{
             input = input - wateryen
@@ -191,11 +192,8 @@ class ViewController: UIViewController {
         waterstock.text = String(waterzaiko)
         
         //買うを押したら画面遷移
-        if input >= wateryen{
         performSegue(withIdentifier: "buynext", sender: nil)
-        }
 
-        
     }
     
     @IBAction func colabuy(_ sender: Any) {
@@ -209,7 +207,6 @@ class ViewController: UIViewController {
         inputyen.text = String(input)
         colastock.text = String(colazaiko)
 
- 
     }
     
     @IBAction func coffeebuy(_ sender: Any) {
@@ -224,7 +221,7 @@ class ViewController: UIViewController {
         coffeestock.text = String(coffeezaiko)
     }
     
-    
+    //お釣りアクション
     @IBAction func oturi(_ sender: Any) {
         pocket = pocket + input
         input = input - input
@@ -254,17 +251,19 @@ class ViewController: UIViewController {
         pocketmoney.textColor = .red
     }
     
+    //所持金が１以上になると黒文字になる
     func TextColor(){
         pocketmoney.textColor = .black
     }
     
+    
     //購入した後の画面遷移
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "buynext"){
-            
+        if segue.identifier == "buynext"{
+            let nextVC = segue.destination as! NextViewController
+            nextVC.selectedImg = waterimage.image
         }
-        let nextVC = segue.destination as! NextViewController
-        nextVC.buyimage = waterimage1
+
     }
     
     

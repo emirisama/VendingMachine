@@ -13,15 +13,15 @@ class NextViewController: UIViewController {
 
     @IBOutlet weak var buyimage: UIImageView!
     
-    var waterImage: UIImage!
+    var selectedImg: UIImage!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        //買うを押すと水画像表示
-        buyimage.image = waterImage
+        //水の「買う」ボタンを押した際、水画像を表示させる
+        buyimage.image = selectedImg
         
        
     }

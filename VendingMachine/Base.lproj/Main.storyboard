@@ -182,7 +182,7 @@
                         <outlet property="inputyen" destination="mht-Pr-yvl" id="YhV-X9-hLo"/>
                         <outlet property="pocketmoney" destination="oq1-xP-1fc" id="Qrn-10-6zS"/>
                         <outlet property="waterbuy" destination="hO3-wu-2IY" id="2LE-hM-hqp"/>
-                        <outlet property="waterimage1" destination="XME-vd-OZ7" id="0n1-4J-Pch"/>
+                        <outlet property="waterimage" destination="XME-vd-OZ7" id="M8J-n7-OB3"/>
                         <outlet property="waterstock" destination="Gdi-Ve-a41" id="3YL-d4-Nbu"/>
                         <outlet property="zyuyen" destination="287-fE-kz7" id="lJE-8W-k9M"/>
                     </connections>
